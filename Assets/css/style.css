@@ -10,11 +10,6 @@
     font-size: var(--fs-md);
 }
 
-* {
-    /* outline: 2px dotted red; */
-    padding: auto;
-}
-
 .section {
     /* width: 100%; */
     background-image: url(../img/Image.png);
@@ -56,7 +51,6 @@ ul {
 }
 
 li {
-    /* padding: 10px; */
     display: inline-block;
     margin: 10px;
 }
@@ -130,7 +124,7 @@ li a:hover {
         flex-direction: column;
         display: flex;
         justify-content: center;
-        display: block;
+        align-items: center;
         position: fixed;
         top: 0px;
         right: -100%;
@@ -138,7 +132,15 @@ li a:hover {
         width: 100%;
         background-color: rgb(128, 180, 180);
         transition: all 300ms linear;
-        /* z-index: 2; */
+        z-index: 2;
+    }
+    li{
+        display: block;
+       padding:5px;
+    }
+    li .btn{
+        margin-left: 0%;
+       
     }
 
     .links {
@@ -152,7 +154,7 @@ li a:hover {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        z-index: 1;
+        z-index: 2;
     }
 
     label[for="slider"] span {
@@ -174,9 +176,7 @@ li a:hover {
     }
 
     input:checked~label[for="slider"] span:nth-child(2) {
-        transform: translateX(-40px);
-        opacity: 0;
-        visibility: hidden;
+        display: none;
     }
 
     input:checked~label[for="slider"] span:nth-child(3) {
@@ -190,6 +190,20 @@ li a:hover {
 
     .heading {
         float: right;
+        position: fixed;
+        top: 10px;
+        right: 0;  
+        z-index: 99;   
 
     }
+    label[for="slider"]{
+        position: fixed;
+        z-index: 99;
+
+    }
+    .heading-p {
+       margin-top: 20px;
+       margin-bottom: 10px;
+    }
+   
 }
